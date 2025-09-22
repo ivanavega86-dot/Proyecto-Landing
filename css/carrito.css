@@ -9,7 +9,8 @@
    grid-template-columns: 1fr 1fr ;
    grid-template-rows: auto  auto;
    grid-template-areas: "header header"
-                        "main1  main2 "
+                        "main1  main1 "
+                        "main2  main2"
                         "footer footer";
 
 
@@ -33,11 +34,11 @@
 }
 .main1 {
     grid-area: main1;
-    height: 80vh;
+    height: 40vh;
 }
 .main2 {
     grid-area: main2;
-    height: 80vh;
+    height: 40vh;
 }
 .footer {
     grid-area: footer;
