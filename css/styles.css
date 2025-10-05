@@ -18,14 +18,19 @@
 
 .grid-item {
     color: rgb(29, 27, 27);
-    padding: 20px;
+    
     text-align: center;
     font-size: 18px;
     font-weight: bold;
+    
 }
 
-.grid-item:nth-child(1) {
+.grid-item:nth-child(2) {
     background-color: rgb(209, 207, 207);
+    display: flex;
+    justify-content: center;
+   
+   
 
 }
 .header {
@@ -41,16 +46,7 @@
     grid-area: footer;
     height: 10vh;
 }
-.main1 {
-    display: flex;
-   flex-direction: column;
 
-}
-.main2 {
-    display: flex;
-   flex-direction: column;
-
-}
 .newseason {
     width: 384px;
     height: 576px;
@@ -62,12 +58,14 @@
     padding: 20px;
 }
 ul li {
-  justify-content: end;
+  /* justify-content: end; */
   display: inline-block;
    list-style: none;
    margin: 10px;
-    }
+}
+
 p{
+    margin: 10px;
     text-align: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: small;
@@ -84,7 +82,7 @@ p{
     
 }
 button {
-    width: 100px;
+
     margin-top: 20px;
     border: none;
     padding: 5px;
@@ -92,7 +90,29 @@ button {
     border-radius: 4px;
     
 }
+.contenido1 {
+    display: flex;
+    flex-direction:column;
+    margin: 10px;
+   
+}
+.contenido2 {
+    display: flex;
+    flex-direction: column; 
+    margin: 10px;
+   
 
+}
+h1 {
+    text-align: center;
+    margin: 20px;
+}
+img {
+    width: 200px;
+    height: 200px;
+    
+   
+}
 @media (max-width:430px) {
 
     .grid-container {
@@ -100,10 +120,10 @@ button {
     display: grid;
    grid-template-columns: 1fr 1fr ;
    grid-template-rows: auto  auto;
-   grid-template-areas: "header header"
-                        "main1  main1  "
-                        "main2  main2  "
-                        "footer  footer";
+   grid-template-areas: "header header "
+                        "main main "
+                        "main main "
+                        "footer footer";
 
 
 }
