@@ -1,6 +1,80 @@
-/* import cariables */
-@use "../utilities/variables" as *;
+@import "../utilities/variables";
+
 
 /* import mixin */
-@use "../utilities/mixin" as *;
+@import "../utilities/mixin";
 
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "header header"
+    "main section"
+    "footer footer";
+  background-color: $color-bg;
+
+  .header {
+    grid-area: header;
+    height: 10vh;
+  }
+
+  .main {
+    grid-area: main;
+    height: 80vh;
+    @include flex-column;
+    margin: 10px;
+  }
+
+  .section {
+    grid-area: section;
+    height: 80vh;
+    @include flex-column;
+    margin: 10px;
+  }
+
+  .footer {
+    grid-area: footer;
+    height: 10vh;
+  }
+
+  .grid-item {
+    color: $color-light;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+  }
+}
+
+.newseason,
+.newin {
+  width: 384px;
+  height: 576px;
+  padding: 20px;
+}
+
+.form {
+  color: $color-text;
+  width: 300px;
+  height: 300px;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid;
+  border-radius: 8px;
+}
+
+.contenido2 {
+  margin-top: 50px;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 780px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "main"
+      "section"
+      "footer";
+  }
+}

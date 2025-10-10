@@ -1,7 +1,5 @@
-/* import reset */
-@use "../sass/base/reset" as *;
 
-/* import home */
-@use "../sass/layout/home" as *;
-
-
+@import "./utilities/variables";
+@import "./utilities/mixin";
+@import "./base/reset";
+@import "./layout/home";

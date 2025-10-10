@@ -1,6 +1,5 @@
-@mixin grid ($colums, $rows, $areas){
-    display: grid;
-    grid-template-columns: $colums;
-    grid-template-rows: $rows;
-    grid-template-areas: $areas;
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
 }
+
